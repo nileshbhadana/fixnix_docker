@@ -1,0 +1,7 @@
+version: '3'
+services:
+  flask-helloworld:
+        image: nileshbhadana/php:latest
+        container_name: php-mysql
+        ports:
+          - 8081:80
