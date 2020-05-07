@@ -3,5 +3,7 @@ services:
   flask-helloworld:
         image: nileshbhadana/php:v1
         container_name: php-mysql
+        volumes:
+          - ./:/var/www/html/
         ports:
           - 8081:80

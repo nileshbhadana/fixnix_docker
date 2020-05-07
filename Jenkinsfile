@@ -3,7 +3,7 @@ pipeline {
     stages {
          stage('docker image build') {
             steps {
-                sh 'docker build -t nileshbhadana/php:v1 .'
+                sh 'docker build -t nileshbhadana/php  .'
             }
         }
          stage('docker container run') {
@@ -13,7 +13,7 @@ pipeline {
         }
          stage('docker image push to dockerhub') {
             steps {
-                sh 'docker push nileshbhadana/php:v1'
+                sh 'docker push nileshbhadana/php'
             }
         }
          stage('confirmation') {
