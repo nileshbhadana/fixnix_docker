@@ -8,7 +8,9 @@ pipeline {
         }
          stage('docker container run') {
             steps {
-                sh 'docker-compose up -d'
+                sh 'docker container stop mysqlphp'
+                sh 'docker container rm mysqlphp'
+                sh 'docker container run -p 8081:80 --name mysqlphp nileshbhadana/php:v1 '
             }
         }
          stage('docker image push to dockerhub') {
